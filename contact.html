@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>도입 상담 신청 — 30분 데모 시연 | SoftCRM 성민네트웍스</title>
+<meta name="description" content="진료과와 상담 인원에 맞춘 구성으로 30분 시연합니다. 대표번호 02-362-4680, 평일 09:00–17:00.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 이동</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__word">SoftCRM</span>
+      <span class="brand__rule" aria-hidden="true"></span>
+      <img src="assets/logo-sungmin-networks.png" alt="성민네트웍스">
+    </a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
+        <a href="index.html">홈</a>
+        <a href="why-crm.html">CRM필요성</a>
+        <a href="product.html">기능</a>
+        <a href="pricing.html">요금</a>
+        <a href="contact.html" class="is-active" aria-current="page">상담 신청</a>
+    </nav>
+    <a class="btn btn--primary btn--sm" href="contact.html">도입 상담 신청</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="section">
+  <div class="container two-col two-col--wide-left" style="gap:88px;align-items:start">
+    <div class="reveal">
+      <div class="heading-block" style="max-width:400px">
+        <div class="eyebrow">Contact</div>
+        <h1 class="h2">30분 데모 시연을<br>신청하세요</h1>
+        <p class="lead">진료과와 상담 인원에 맞춘 구성으로 시연합니다. 영업일 기준 1일 내 연락드립니다.</p>
+      </div>
+      <div style="margin-top:48px;font-size:25px;font-weight:600;color:var(--text-heading);letter-spacing:-0.01em">(주) 성민네트웍스</div>
+      <img src="assets/logo-sungmin-networks.png" alt="성민네트웍스" style="display:block;height:22px;width:auto;margin-top:10px">
+      <dl style="margin:24px 0 0;display:grid;gap:20px">
+        <div>
+          <dt class="caption">대표번호</dt>
+          <dd class="num" style="margin:4px 0 0;font-size:20px;font-weight:600;color:var(--text-heading)"><a href="tel:0233624680" style="color:inherit">02-362-4680</a></dd>
+        </div>
+        <div>
+          <dt class="caption">상담 시간</dt>
+          <dd style="margin:4px 0 0;font-size:16px;color:var(--text-body)">평일 09:00–17:00</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="reveal d1">
+      <div class="card" style="padding:40px">
+        <form id="contact-form" class="form-grid" novalidate>
+          <div class="form-grid form-grid--2">
+            <label class="field">
+              <span class="field__label">병원명<i>*</i></span>
+              <input class="input" type="text" name="hospital" placeholder="예) 성민안과" autocomplete="organization" required>
+            </label>
+            <label class="field">
+              <span class="field__label">담당자 성함<i>*</i></span>
+              <input class="input" type="text" name="manager" placeholder="예) 김실장" autocomplete="name" required>
+            </label>
+          </div>
+          <div class="form-grid form-grid--2">
+            <label class="field">
+              <span class="field__label">연락처<i>*</i></span>
+              <input class="input" type="tel" name="phone" placeholder="02-1234-5678" inputmode="numeric" autocomplete="tel" required>
+            </label>
+            <label class="field">
+              <span class="field__label">진료과<i>*</i></span>
+              <select class="select" name="department" required>
+                <option value="" selected disabled>진료과 선택</option>
+                <option value="안과">안과</option>
+                <option value="성형외과">성형외과</option>
+                <option value="치과">치과</option>
+                <option value="복합 진료">복합 진료</option>
+              </select>
+            </label>
+          </div>
+          <label class="field">
+            <span class="field__label">문의 내용</span>
+            <textarea class="textarea" name="message" rows="4" placeholder="예) 상담 기록과 예약 관리가 따로 돌아갑니다."></textarea>
+            <span class="field__hint">현재 사용 중인 프로그램을 함께 적어주시면 상담이 빨라집니다.</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="agree">
+            <span class="checkbox__box" aria-hidden="true"></span>
+            <span>개인정보 수집·이용에 동의합니다.</span>
+          </label>
+          <p class="form-error" id="form-error" hidden></p>
+          <div style="margin-top:8px">
+            <button class="btn btn--primary btn--full" type="submit" id="form-submit">도입 상담 신청</button>
+          </div>
+        </form>
+        <div id="form-done" hidden style="padding:40px 0">
+          <div class="h3">신청이 접수되었습니다</div>
+          <p style="margin-top:12px;font-size:17px;line-height:1.75;color:var(--text-body)">담당자가 영업일 기준 1일 내 연락드립니다. 급한 경우 02-362-4680으로 전화 주세요.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__cols">
+      <div>
+        <div class="site-footer__word">SoftCRM</div>
+        <img src="assets/logo-sungmin-networks.png" alt="성민네트웍스">
+      </div>
+      <div>
+        <h2>제품</h2>
+        <ul>
+          <li><a href="product.html">기능</a></li>
+          <li><a href="pricing.html">요금</a></li>
+          <li><a href="why-crm.html">CRM 필요성</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>지원</h2>
+        <ul>
+          <li><a href="contact.html">사용 가이드</a></li>
+          <li><a href="contact.html">원격 지원</a></li>
+          <li><a href="contact.html">공지사항</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>회사</h2>
+        <ul>
+          <li><a href="contact.html">회사 소개</a></li>
+          <li><a href="contact.html">채용</a></li>
+          <li><a href="contact.html">문의</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__note">성민네트웍스 · 서울 강남구 · 대표번호 02-362-4680 · 사업자등록번호 000-00-00000 · 개인정보처리방침</div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

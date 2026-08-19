@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SoftCRM — 안과·성형외과·치과 병원 CRM | 성민네트웍스</title>
+<meta name="description" content="문의 접수부터 재내원까지 병원 상담 업무를 한 화면에서 관리하는 병원 CRM. EMR 연동으로 고객정보를 동기화합니다.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 이동</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__word">SoftCRM</span>
+      <span class="brand__rule" aria-hidden="true"></span>
+      <img src="assets/logo-sungmin-networks.png" alt="성민네트웍스">
+    </a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
+        <a href="index.html" class="is-active" aria-current="page">홈</a>
+        <a href="why-crm.html">CRM필요성</a>
+        <a href="product.html">기능</a>
+        <a href="pricing.html">요금</a>
+        <a href="contact.html">상담 신청</a>
+    </nav>
+    <a class="btn btn--primary btn--sm" href="contact.html">도입 상담 신청</a>
+  </div>
+</header>
+
+<main id="main">
+<section style="position:relative;overflow:hidden;background:var(--surface-page);padding:120px clamp(var(--gutter-mobile),5vw,var(--gutter)) 0">
+  <div aria-hidden="true" style="position:absolute;right:0;bottom:0;width:46%;height:62%;background:var(--color-primary-tint);clip-path:polygon(18% 0,100% 0,100% 100%,0 100%)"></div>
+  <div class="container" style="position:relative">
+    <div class="reveal" style="max-width:760px">
+      <div class="badge-row" style="margin-bottom:26px">
+        <span class="badge">안과</span><span class="badge">성형외과</span><span class="badge">치과</span>
+      </div>
+      <h1 class="h1">시스템화 된 고객관리가<br>수술 예약으로 이어집니다</h1>
+      <p class="lead" style="margin-top:26px;max-width:620px">SoftCRM은 문의 접수부터 재내원까지 병원 상담 업무를 한 화면에서 관리하는 CRM입니다. 차트 프로그램은 그대로 쓰면서, 상담과 예약만 정리합니다.</p>
+      <div class="btn-row" style="margin-top:40px">
+        <a class="btn btn--primary" href="contact.html">도입 상담 신청</a>
+        <a class="btn btn--secondary" href="product.html">제품기능 보기</a>
+      </div>
+      <p class="caption" style="margin-top:20px">EMR 연동으로 고객정보 동기화</p>
+    </div>
+    <figure class="shot reveal d1" style="margin-top:72px;padding-bottom:96px">
+      <div class="shot__frame">
+        <img src="assets/screen-customer-management.png" alt="SoftCRM 고객관리 화면 — 고객 기본정보, 예약 이력, 검사·수술 정보, 문자 이력을 한 화면에서 관리">
+      </div>
+      <figcaption>고객관리 화면. 고객 정보, 예약 이력, 검사·수술 기록, 문자 발송 이력이 한 화면에 있습니다.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--alt slant-top">
+  <div class="container two-col two-col--wide-left">
+    <div class="reveal">
+      <div class="heading-block">
+        <div class="eyebrow">Funnel</div>
+        <h2 class="h2">어느 단계에서 환자가 이탈 되는지 확인됩니다</h2>
+        <p class="lead">문의 수는 늘었는데 수술 건수가 그대로일 때, 원인은 대개 한 단계에 있습니다. SoftCRM은 경로별·상담사별로 전환을 집계합니다.</p>
+      </div>
+    </div>
+    <div class="reveal d1">
+      <div class="card">
+        <div class="caption" style="margin-bottom:20px">2026년 7월 · 강남 성형외과 예시</div>
+        <div class="funnel">
+          <div class="funnel__row">
+            <span class="funnel__label">전화·온라인 문의</span>
+            <span class="funnel__track"><span class="funnel__bar" style="width:100%"></span></span>
+            <span class="funnel__value">1,240건</span>
+          </div>
+          <div class="funnel__row">
+            <span class="funnel__label">예약 확정</span>
+            <span class="funnel__track"><span class="funnel__bar" style="width:66%"></span></span>
+            <span class="funnel__value">812건</span>
+          </div>
+          <div class="funnel__row">
+            <span class="funnel__label">실제 내원</span>
+            <span class="funnel__track"><span class="funnel__bar" style="width:49%"></span></span>
+            <span class="funnel__value">604건</span>
+          </div>
+          <div class="funnel__row">
+            <span class="funnel__label">수술·시술 결정</span>
+            <span class="funnel__track"><span class="funnel__bar funnel__bar--accent" style="width:15%"></span></span>
+            <span class="funnel__value funnel__value--accent">188건</span>
+          </div>
+        </div>
+        <p class="caption" style="margin-top:22px">예약 확정 대비 내원율 74%. 미내원 208건이 재예약 목록으로 넘어갑니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="product">
+  <div class="container stack-xl">
+    <div class="two-col">
+      <div class="reveal">
+        <div class="heading-block" style="max-width:460px">
+          <div class="eyebrow">INTAKE</div>
+          <h2 class="h2">CRM Process Power<br>고객 전환 프로세스의 핵심</h2>
+          <p class="lead">고객과의 접점(MOT)에서 CRM 기능을 통해 전환율을 높이고 지능화된 고객관리 서비스를 실현합니다.</p>
+        </div>
+        <ul class="bullets">
+          <li>고객 로열티 강화: 고객 경험개선을 통한 고객충성도 향상</li>
+          <li>고객유입후 내원동기 분석을 통한 고객마케팅 유입전략 고도화</li>
+          <li>실시간으로 예약율, 내원율, 상담성공율 분석하여 수술전환율 극대화</li>
+        </ul>
+      </div>
+      <div class="reveal d1">
+        <div class="grid-slot"><span>상담 접수 화면 1440×900</span></div>
+      </div>
+    </div>
+    <div class="two-col two-col--text-right">
+      <div class="reveal">
+        <div class="heading-block" style="max-width:460px">
+          <div class="eyebrow">RECALL</div>
+          <h2 class="h2">예약 부도와 재내원 누락을 자동으로 줄입니다</h2>
+          <p class="lead">예약 3일 전, 당일, 미내원 다음 날에 알림톡이 순서대로 나갑니다. 이탈 고객이 생기면 리콜 명단에 남아 전화 대상으로 올라옵니다.</p>
+        </div>
+        <ul class="bullets">
+          <li>3단계 알림톡 발송</li>
+          <li>미내원 자동 재예약 목록</li>
+          <li>발송 결과 로그</li>
+        </ul>
+      </div>
+      <div class="reveal d1">
+        <div class="grid-slot"><span>리콜 관리 화면 1440×900</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col two-col--quote">
+    <div class="reveal">
+      <blockquote style="margin:0">
+        <p style="font-size:clamp(22px,2.2vw,30px);font-weight:600;line-height:1.5;letter-spacing:-0.02em;color:var(--text-heading)">“상담 실장이 세 명인데 각자 수첩이나, 엑셀을 쓰고 있었습니다. 지금은 누가 받은 문의든 다음 연락일이 화면에 떠 있습니다.”</p>
+        <footer class="caption" style="margin-top:24px">서울 강남 · 성형외과 원장 · 상담 실장 3인, 월 문의 800건 규모</footer>
+      </blockquote>
+    </div>
+    <div class="reveal d1">
+      <div style="display:grid;gap:40px">
+        <div>
+          <div class="stat__value">38<span>%</span></div>
+          <div class="stat__label">재방문 예약률 상승</div>
+          <div class="stat__note">안과 3개원 6개월 평균</div>
+        </div>
+        <div>
+          <div class="stat__value">3<span>분</span></div>
+          <div class="stat__label">1건당 상담 기록 시간 단축</div>
+          <div class="stat__note">도입 전후 실측</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--primary slant-top">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:48px;flex-wrap:wrap">
+    <div style="max-width:620px">
+      <h2 class="h2">병원 상담 흐름에 맞는지, 30분 화면 시연으로 확인하세요</h2>
+      <p class="lead" style="margin-top:20px;color:rgba(255,255,255,0.82)">진료과와 상담 인원만 알려주시면 해당 구성으로 시연합니다.</p>
+    </div>
+    <a class="btn btn--secondary" href="contact.html">도입 상담 신청</a>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__cols">
+      <div>
+        <div class="site-footer__word">SoftCRM</div>
+        <img src="assets/logo-sungmin-networks.png" alt="성민네트웍스">
+      </div>
+      <div>
+        <h2>제품</h2>
+        <ul>
+          <li><a href="product.html">기능</a></li>
+          <li><a href="pricing.html">요금</a></li>
+          <li><a href="why-crm.html">CRM 필요성</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>지원</h2>
+        <ul>
+          <li><a href="contact.html">사용 가이드</a></li>
+          <li><a href="contact.html">원격 지원</a></li>
+          <li><a href="contact.html">공지사항</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>회사</h2>
+        <ul>
+          <li><a href="contact.html">회사 소개</a></li>
+          <li><a href="contact.html">채용</a></li>
+          <li><a href="contact.html">문의</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__note">성민네트웍스 · 서울 강남구 · 대표번호 02-362-4680 · 사업자등록번호 000-00-00000 · 개인정보처리방침</div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
