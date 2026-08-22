@@ -171,3 +171,17 @@ var FORM_ENDPOINT = "";
       });
   });
 })();
+
+/* ── 4) 메인 이미지 페이드 슬라이더 ── */
+(function () {
+  var images = document.querySelectorAll(".shot__frame--slider img");
+  if (images.length < 2) return;
+
+  setInterval(function () {
+    Array.prototype.forEach.call(images, function (img) {
+      img.classList.toggle("active");
+    });
+  }, 2500);
+})();
+
+
