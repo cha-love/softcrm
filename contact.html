@@ -71,24 +71,6 @@
               <span class="field__label">연락처<i>*</i></span>
               <input class="input" type="tel" name="phone" placeholder="02-1234-5678" inputmode="numeric" autocomplete="tel" required>
             </label>
-            <!-- [추가] 요청항목 (문의 내용 윗부분) -->
-            <div class="field">
-              <span class="field__label">요청항목<i>*</i></span>
-              <div style="display: flex; gap: 20px; margin-top: 8px;">
-                <label class="checkbox">
-                  <!-- 기본 선택(checked) 처리 -->
-                  <input type="checkbox" name="request_item" value="30분 데모요청" checked>
-                  <span class="checkbox__box" aria-hidden="true"></span>
-                  <span>30분 데모요청</span>
-                </label>
-                <label class="checkbox">
-                  <input type="checkbox" name="request_item" value="소개서 이메일 받기">
-                  <span class="checkbox__box" aria-hidden="true"></span>
-                  <span>소개서 이메일 받기</span>
-                </label>
-              </div>
-            </div>            
-            
             <label class="field">
               <span class="field__label">진료과<i>*</i></span>
               <select class="select" name="department" required>
@@ -100,6 +82,25 @@
               </select>
             </label>
           </div>
+
+          <!-- [추가] 문의항목 체크박스 -->
+          <div class="field">
+            <span class="field__label">문의항목<i>*</i></span>
+            <div style="display: flex; gap: 20px; margin-top: 8px;">
+              <label class="checkbox">
+                <input type="checkbox" name="inquiry_type" value="데모요청">
+                <span class="checkbox__box" aria-hidden="true"></span>
+                <span>데모요청</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="inquiry_type" value="소개서받기">
+                <span class="checkbox__box" aria-hidden="true"></span>
+                <span>소개서받기</span>
+              </label>
+            </div>
+          </div>
+          <!-- //[추가] 문의항목 체크박스 -->
+
           <label class="field">
             <span class="field__label">문의 내용</span>
             <textarea class="textarea" name="message" rows="4" placeholder="예) 상담 기록과 예약 관리가 따로 돌아갑니다."></textarea>
@@ -146,20 +147,35 @@
 </footer>
 
 <script src="site.js"></script>
+
 <!-- [추가] 최소 1개 선택 검증 스크립트 -->
 <script>
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    const checkedItems = document.querySelectorAll('input[name="request_item"]:checked');
-    const errorEl = document.getElementById('form-error');
-
-    if (checkedItems.length === 0) {
-      e.preventDefault();
-      errorEl.textContent = '요청항목을 최소 1개 이상 선택해 주세요.';
-      errorEl.removeAttribute('hidden');
-    } else {
-      errorEl.setAttribute('hidden', '');
-    }
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  
+  if(form) {
+    form.addEventListener('submit', function(e) {
+      // 1. 체크된 문의항목 갯수 확인
+      const checkedInquiryTypes = document.querySelectorAll('input[name="inquiry_type"]:checked');
+      
+      // 2. 하나도 선택하지 않은 경우
+      if(checkedInquiryTypes.length === 0) {
+        e.preventDefault(); // 폼 전송 중단
+        
+        // 커스텀 에러 텍스트 표시가 가능하다면 에러 메시지 띄우기
+        const errorEl = document.getElementById('form-error');
+        if(errorEl) {
+          errorEl.textContent = '문의항목을 최소 1개 이상 선택해 주세요.';
+          errorEl.hidden = false;
+        } else {
+          alert('문의항목을 최소 1개 이상 선택해 주세요.');
+        }
+        
+        return false;
+      }
+    });
+  }
+});
 </script>
 </body>
 </html>
